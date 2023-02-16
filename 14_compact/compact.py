@@ -1,4 +1,6 @@
 def compact(lst):
+    return [x for x in lst if (x) ]
+
     """Return a copy of lst with non-true elements removed.
 
         >>> compact([0, 1, 2, '', [], False, (), None, 'All done'])

@@ -1,4 +1,6 @@
 def calculate(operation, a, b, make_int=False, message='The result is'):
+
+    
     """Perform operation on a + b, ()possibly truncating) & returning w/msg.
 
     - operation: 'add', 'subtract', 'multiply', or 'divide'
@@ -26,3 +28,17 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+    if (type(a) != int and type(a) != float or type(b)!= int and type(b) != float):
+        return "please enter numbers"
+    if make_int == True:
+        a = int(a)
+        b = int(b)
+    if operation == "add":
+        return f"{message} {a+b}"
+    if operation == "subtract":
+        return f"{message} {a-b}"
+    if operation == "multiply":
+        return f"{message} {a*b}"
+    if operation == "divide":
+        return f"{message} {a/b}"
+   

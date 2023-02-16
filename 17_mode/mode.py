@@ -11,3 +11,11 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    result = {"char" : '', "count": 0}
+    for num in nums:
+        if nums.count(num) > result["count"]:
+            result["count"] =nums.count(num)
+            result["char"] = num
+    return result["char"]
+
+
