@@ -1,4 +1,8 @@
 def find_the_duplicate(nums):
+    for num in nums:
+        if nums.count(num)>1:
+            return num
+    return None
     """Find duplicate number in nums.
 
     Given a list of nums with, at most, one duplicate, return the duplicate.

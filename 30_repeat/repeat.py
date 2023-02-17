@@ -1,4 +1,7 @@
 def repeat(phrase, num):
+    if isinstance(num,int) == False:
+        return None
+    return ''.join([phrase for x in list(range(0,num))])
     """Return phrase, repeated num times.
 
         >>> repeat('*', 3)

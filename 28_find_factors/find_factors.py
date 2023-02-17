@@ -1,4 +1,5 @@
 def find_factors(num):
+    
     """Find factors of num, in increasing order.
 
     >>> find_factors(10)
@@ -13,3 +14,5 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+    cands = list (range(1,num+1))
+    return [x for x in cands if num % x == 0]

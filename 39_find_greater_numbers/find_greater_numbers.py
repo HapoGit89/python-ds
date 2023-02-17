@@ -19,3 +19,14 @@ def find_greater_numbers(nums):
         >>> find_greater_numbers([])
         0
     """
+    summe = 0
+    i1 = 0
+    i2 = 1
+    while i1 < len(nums):
+        while i2 < len(nums):
+            if nums[i2]>nums[i1]:
+                summe +=1
+            i2 += 1     
+        i1 += 1
+        i2 = i1 +1
+    return summe

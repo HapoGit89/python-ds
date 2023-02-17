@@ -13,6 +13,14 @@ def two_oldest_ages(ages):
         >>> two_oldest_ages([1, 5, 5, 2])
         (2, 5)
     """
+    sorted_ages = sorted(ages, reverse=True)
+    i = 1
+    while sorted_ages[0]==sorted_ages[i]:
+        i += 1
+    return (sorted_ages[i], sorted_ages[0])
+
+
+
 
     # NOTE: don't worry about an optimized runtime here; it's fine if
     # you have a runtime worse than O(n)
